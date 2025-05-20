@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@import "variables.module";
+@import url("https://fonts.googleapis.com/css2?family=Faculty+Glyphic&display=swap");
+html,
+body {
+  height: 100%;
+  background-color: $beige-back;
+  color: $black-text;
+  font-family: "Faculty Glyphic", sans-serif;
+  margin: 1rem;
+  main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+    width: 100%;
+  }
+}

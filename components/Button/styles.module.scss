@@ -1,0 +1,19 @@
+@import "../../app/variables.module";
+
+.Button {
+  background-color: $green-button2;
+  border-radius: 100px;
+  color: white;
+  padding: 0.7rem 1.7rem;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  width: 15rem;
+  transition: all 0.2s;
+}
+.Button:hover {
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: $green-button;
+  color: $black-text;
+}
