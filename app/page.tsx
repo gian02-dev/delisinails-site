@@ -13,9 +13,11 @@ export default function Home() {
         <div className={styles.text}>
           <p>
             Mi chiamo Alessia, sono di Palermo, ho 21 anni e da oltre 5 anni
-            coltivo con passione l’amore per il mondo Nails. Il mio obiettivo
-            non è solo valorizzare l’estetica delle mani, ma{" "}
-            <b>prendermi cura della salute delle unghie</b>
+            coltivo con passione l’amore per il mondo Nails.
+          </p>
+          <p>
+            Il mio obiettivo non è solo valorizzare l’estetica delle mani, ma{" "}
+            <b>prendermi cura della salute delle unghie</b>.
           </p>
           <p>
             Ho frequentato diversi corsi formativi con Master italiane e
