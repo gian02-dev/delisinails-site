@@ -8,9 +8,9 @@
   gap: 1rem;
   transition: all 0.2s;
   background-color: $beige2-back;
-  padding: 2rem 1rem 2rem 1rem;
-  border-radius: 30px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 1rem 1.5rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.161);
   margin-bottom: 1rem;
   width: 20rem;
   .title {
@@ -22,7 +22,7 @@
     img {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
         0 3px 10px 0 rgba(0, 0, 0, 0.1);
-      border-radius: 1.5rem;
+      border-radius: 1rem;
     }
   }
   .text {
@@ -32,5 +32,6 @@
     align-items: center;
     gap: 0.7rem;
     font-size: 1.1rem;
+    text-shadow: 3px 2px 2px 0 rgba(255, 255, 255, 0.8);
   }
 }

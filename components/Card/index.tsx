@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import Button from "../Button";
+import ButtonCard from "../ButtonCard";
 
 interface CardProps {
   title: string;
@@ -26,7 +26,7 @@ const Card: React.FC<CardProps> = ({
             <img src={image} alt={title} />
           </div>
           <div className={styles.text}>{text}</div>
-          <Button text={buttonText} />
+          <ButtonCard text={buttonText} />
         </div>
       ) : (
         <div className={styles.Card}>

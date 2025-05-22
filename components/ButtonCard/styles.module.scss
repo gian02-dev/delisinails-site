@@ -1,10 +1,10 @@
 @import "../../app/variables.module";
 
 .Button {
-  background-color: $green-button2;
-  border-radius: 100px;
+  background-color: $red-dark;
+  border-radius: 2rem;
   color: white;
-  padding: 0.6rem 1.4rem;
+  padding: 0.45rem 1.2em;
   text-align: center;
   font-size: 1.1rem;
   font-weight: bold;
@@ -13,6 +13,6 @@
 .Button:hover {
   cursor: pointer;
   transition: all 0.2s;
-  background-color: $green-button;
+  background-color: $red-light;
   color: $black-text;
 }
