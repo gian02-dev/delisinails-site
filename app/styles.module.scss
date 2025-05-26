@@ -5,14 +5,14 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1rem;
   transition: all 0.2s;
   margin: 0rem 6rem 1rem 6rem;
   background-color: $beige2-back;
   padding: 2rem 1rem 2rem 1rem;
   border-radius: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1250px) {
     flex-direction: column;
     margin: 0rem 4rem 1rem 4rem;
   }
@@ -35,8 +35,10 @@
       filter: drop-shadow(3px 3px 0 rgb(73, 73, 73, 0.5))
         drop-shadow(-1px -1px 0 rgb(73, 73, 73, 0.5));
       width: 1000px;
-
-      @media screen and (max-width: 1000px) {
+      @media screen and (min-width: 1800px) {
+        width: 500px;
+      }
+      @media screen and (max-width: 1250px) {
         width: 300px;
       }
       @media screen and (max-width: 550px) {
@@ -52,8 +54,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: left;
     gap: 0.7rem;
     font-size: 1.2rem;
+    padding: 1rem;
     .Space {
       margin-top: 0.5rem;
     }
@@ -68,6 +72,20 @@
     }
     @media screen and (max-width: 480px) {
       font-size: 1rem;
+    }
+    .Title {
+      @media screen and (max-width: 1300px) {
+        font-size: 1.2rem;
+      }
+      @media screen and (max-width: 1060px) {
+        font-size: 1.1rem;
+      }
+      @media screen and (max-width: 1000px) {
+        font-size: 1.3rem;
+      }
+      @media screen and (max-width: 480px) {
+        font-size: 1.1rem;
+      }
     }
   }
 }
