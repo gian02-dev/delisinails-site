@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import ButtonCard from "../ButtonCard";
+import ButtonCard from "../Buttons/ButtonCard";
 
 interface CardProps {
   title: string;
@@ -10,13 +10,7 @@ interface CardProps {
   buttonText: string;
 }
 
-const Card: React.FC<CardProps> = ({
-  title,
-  image,
-  text,
-  button,
-  buttonText,
-}) => {
+function Card({ title, image, text, button, buttonText }: CardProps) {
   return (
     <>
       {button === true ? (
@@ -39,6 +33,6 @@ const Card: React.FC<CardProps> = ({
       )}
     </>
   );
-};
+}
 
 export default Card;

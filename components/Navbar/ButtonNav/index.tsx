@@ -6,7 +6,7 @@ interface ButtonNavProps {
   active: number;
 }
 
-const ButtonNav: React.FC<ButtonNavProps> = ({ text, active }) => {
+function ButtonNav({ text, active }: ButtonNavProps) {
   return (
     <>
       {/* funzione che genera il bottone se in active (stessa path) oppure non in active (path diversa) */}
@@ -20,6 +20,6 @@ const ButtonNav: React.FC<ButtonNavProps> = ({ text, active }) => {
       )}
     </>
   );
-};
+}
 
 export default ButtonNav;

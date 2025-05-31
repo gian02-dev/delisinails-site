@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import styles from "./styles.module.scss";
-import ButtonNav from "../ButtonNav";
+import ButtonNav from "./ButtonNav";
 import { usePathname } from "next/navigation";
 
 function navbar() {
@@ -13,7 +13,7 @@ function navbar() {
   //Oggetto che funge da database per la lista dei pulsanti Navbar
   const ButtonNavList = [
     {
-      titolo: "CHI SONO",
+      titolo: "HOMEPAGE",
       path: "/",
     },
     {

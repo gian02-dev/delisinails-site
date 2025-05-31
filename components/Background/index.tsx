@@ -5,7 +5,7 @@ interface BackgroundProps {
   src: string;
 }
 
-const Background: React.FC<BackgroundProps> = ({ src }) => {
+function Background({ src }: BackgroundProps) {
   return (
     <>
       <div className={styles.Background}>
@@ -15,6 +15,6 @@ const Background: React.FC<BackgroundProps> = ({ src }) => {
       </div>
     </>
   );
-};
+}
 
 export default Background;

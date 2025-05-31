@@ -1,14 +1,30 @@
 "use client"; // This is a client component
 
 import styles from "./styles.module.scss";
-import Button from "../components/Button";
+import Button from "@/components/Buttons/Button";
+import NavContainer from "@/components/NavContainer";
+
+export const TitlesContainerList = [
+  {
+    titolo: "CHI SONO",
+  },
+  {
+    titolo: "PERCHÉ IO",
+  },
+  {
+    titolo: "EDUCAZIONE",
+  },
+];
 
 export default function Home() {
   return (
     <>
+      <NavContainer element={TitlesContainerList} />
       <div className={styles.home}>
         <div className={styles.logo}>
-          <img src="/profile.png" alt="FOTO ALESSIA" />
+          <a href="/">
+            <img src="/profile.png" alt="FOTO ALESSIA" />
+          </a>
         </div>
         <div className={styles.text}>
           <b className={styles.Title}>

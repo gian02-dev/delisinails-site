@@ -1,0 +1,9 @@
+@import "@/app/variables.module";
+
+.NavContainer {
+  .NavButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
