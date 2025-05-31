@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styles from "./styles.module.scss";
-import Button from "../Buttons/Button";
+import ButtonGreen from "../Buttons/ButtonGreen";
 
 interface NavContainerProps {
   element: { titolo: string }[];
@@ -12,7 +12,7 @@ function NavContainer({ element }: NavContainerProps) {
       <div className={styles.NavContainer}>
         <div className={styles.NavButtons}>
           {element.map(function (e, i) {
-            return <Button text={e.titolo} key={i} />;
+            return <ButtonGreen text={e.titolo} voidBack={true} key={i} />;
           })}
         </div>
       </div>

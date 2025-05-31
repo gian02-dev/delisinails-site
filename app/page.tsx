@@ -1,7 +1,7 @@
 "use client"; // This is a client component
 
 import styles from "./styles.module.scss";
-import Button from "@/components/Buttons/Button";
+import ButtonGreen from "@/components/Buttons/ButtonGreen";
 import NavContainer from "@/components/NavContainer";
 
 export const TitlesContainerList = [
@@ -84,7 +84,7 @@ export default function Home() {
           </ul>
           <div className={styles.Space}></div>
           <a href="/trattamenti">
-            <Button text="I MIEI TRATTAMENTI" />
+            <ButtonGreen text="I MIEI TRATTAMENTI" voidBack={false} />
           </a>
         </div>
       </div>

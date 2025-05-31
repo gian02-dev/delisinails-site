@@ -1,0 +1,36 @@
+@import "@/app/variables.module";
+
+.Button {
+  background-color: $green-button2;
+  border-radius: 3rem;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+.Button:hover {
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: $green-button;
+  color: $black-text;
+}
+
+.ButtonVoid {
+  border: 2px solid $green-button2;
+  border-radius: 3rem;
+  color: $black-text;
+  padding: 0.6rem 1.2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+.ButtonVoid:hover {
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: $green-button2;
+  color: $black-text;
+  color: white;
+}
