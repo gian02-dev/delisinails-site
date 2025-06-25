@@ -12,7 +12,7 @@ export const TitlesContainerList = [
     titolo: "PERCHÉ IO",
   },
   {
-    titolo: "EDUCAZIONE",
+    titolo: "FORMAZIONE",
   },
 ];
 
@@ -84,7 +84,12 @@ export default function Home() {
           </ul>
           <div className={styles.Space}></div>
           <a href="/trattamenti">
-            <ButtonGreen text="I MIEI TRATTAMENTI" voidBack={false} />
+            <ButtonGreen
+              text="I MIEI TRATTAMENTI"
+              voidBack={false}
+              click={() => {}}
+              num={0}
+            />
           </a>
         </div>
       </div>
