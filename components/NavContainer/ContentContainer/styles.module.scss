@@ -1,0 +1,10 @@
+@import "@/app/variables.module";
+
+.visibleContent {
+}
+
+.invisibleContent {
+  visibility: hidden;
+  position: absolute;
+  top: -9999px;
+}

@@ -11,17 +11,21 @@ interface ButtonProps {
 
 function ButtonGreen({ text, voidBack, click, id, useState }: ButtonProps) {
   //settaggio del voidBack in caso l'id corrisponde
-  if (useState === id && useState != 999) {
+  if (useState === id) {
     voidBack = false;
   }
   return (
     <>
       {voidBack === true ? (
-        <button onClick={() => click(id)} className={styles.ButtonVoid}>
+        <button
+          onClick={() => click(id)}
+          className={styles.ButtonVoid}
+          key={text}
+        >
           {text}
         </button>
       ) : (
-        <button onClick={() => click(id)} className={styles.Button}>
+        <button onClick={() => click(id)} className={styles.Button} key={text}>
           {text}
         </button>
       )}

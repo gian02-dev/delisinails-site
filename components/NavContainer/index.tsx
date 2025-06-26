@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import styles from "./styles.module.scss";
 import ButtonGreen from "../Buttons/ButtonGreen";
-import { useState, useEffect } from "react";
-
+import { useState } from "react";
+import ContentContainer from "./ContentContainer";
+import { Content } from "next/font/google";
 interface NavContainerProps {
-  element: { titolo: string }[];
+  element: { titolo: string; content: string }[];
 }
 
 function NavContainer({ element }: NavContainerProps) {
@@ -17,25 +18,30 @@ function NavContainer({ element }: NavContainerProps) {
 
   //   useEffect(() => {}, [selectedButton]);
   return (
-    <>
-      <div className={styles.NavContainer}>
-        <div className={styles.NavButtons}>
-          {element.map(function (e, i) {
-            return (
-              //bottoni NAV
-              <ButtonGreen
+    <div className={styles.NavContainer}>
+      <div className={styles.NavButtons}>
+        {element.map(function (e, i) {
+          return (
+            <div key={i}>
+              <ButtonGreen //bottoni NAV
                 text={e.titolo}
                 voidBack={true}
                 click={clickEvent}
-                key={i}
                 id={i} //definisce il numero del bottone, che serve per poter chiamare la funzione clickEvent(id) con il proprio bottone
                 useState={selectedButton}
+                key={e.titolo}
               />
-            );
-          })}
-        </div>
+              <ContentContainer
+                content={e.content}
+                id={i}
+                useState={selectedButton}
+                key={e.content}
+              />
+            </div>
+          );
+        })}
       </div>
-    </>
+    </div>
   );
 }
 

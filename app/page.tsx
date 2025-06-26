@@ -7,12 +7,15 @@ import NavContainer from "@/components/NavContainer";
 export const TitlesContainerList = [
   {
     titolo: "CHI SONO",
+    content: "content1",
   },
   {
     titolo: "PERCHÉ IO",
+    content: "content2",
   },
   {
     titolo: "FORMAZIONE",
+    content: "content3",
   },
 ];
 
@@ -89,7 +92,7 @@ export default function Home() {
               voidBack={false}
               click={() => {}}
               id={0}
-              useState={999}
+              useState={1}
             />
           </a>
         </div>
