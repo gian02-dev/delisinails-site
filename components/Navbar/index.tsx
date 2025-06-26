@@ -4,27 +4,12 @@ import React from "react";
 import Link from "next/link";
 import styles from "./styles.module.scss";
 import ButtonNav from "./ButtonNav";
+import ButtonNavList from "@/data/NavBar/ButtonNavList";
 import { usePathname } from "next/navigation";
 
 function navbar() {
   //variabile che indica il nome della PATH corrente
   const pathname = usePathname();
-
-  //Oggetto che funge da database per la lista dei pulsanti Navbar
-  const ButtonNavList = [
-    {
-      titolo: "HOMEPAGE",
-      path: "/",
-    },
-    {
-      titolo: "TRATTAMENTI",
-      path: "/trattamenti",
-    },
-    {
-      titolo: "CONTATTAMI",
-      path: "/contactme",
-    },
-  ];
 
   return (
     <>

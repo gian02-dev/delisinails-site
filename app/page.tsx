@@ -3,21 +3,7 @@
 import styles from "./styles.module.scss";
 import ButtonGreen from "@/components/Buttons/ButtonGreen";
 import NavContainer from "@/components/NavContainer";
-
-export const TitlesContainerList = [
-  {
-    titolo: "CHI SONO",
-    content: "content1",
-  },
-  {
-    titolo: "PERCHÉ IO",
-    content: "content2",
-  },
-  {
-    titolo: "FORMAZIONE",
-    content: "content3",
-  },
-];
+import TitlesContainerList from "@/data/NavContainer/TitlesContainerList";
 
 export default function Home() {
   return (

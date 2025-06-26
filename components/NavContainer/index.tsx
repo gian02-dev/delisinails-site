@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 import ButtonGreen from "../Buttons/ButtonGreen";
 import { useState } from "react";
 import ContentContainer from "./ContentContainer";
-import { Content } from "next/font/google";
+
 interface NavContainerProps {
   element: { titolo: string; content: string }[];
 }
