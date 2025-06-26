@@ -88,7 +88,8 @@ export default function Home() {
               text="I MIEI TRATTAMENTI"
               voidBack={false}
               click={() => {}}
-              num={0}
+              id={0}
+              useState={999}
             />
           </a>
         </div>

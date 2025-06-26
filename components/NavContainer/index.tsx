@@ -10,30 +10,26 @@ interface NavContainerProps {
 function NavContainer({ element }: NavContainerProps) {
   const [selectedButton, setSelectedButton] = useState(0);
 
-  function clickEvent(num: number) {
-    console.log(num);
-    setSelectedButton(num);
+  function clickEvent(id: number) {
+    console.log(id);
+    setSelectedButton(id);
   }
 
-  useEffect(() => {}, [selectedButton]);
+  //   useEffect(() => {}, [selectedButton]);
   return (
     <>
       <div className={styles.NavContainer}>
         <div className={styles.NavButtons}>
           {element.map(function (e, i) {
-            let active = true;
-            if (i === selectedButton) {
-              active = false;
-            } else {
-              active = true;
-            }
             return (
+              //bottoni NAV
               <ButtonGreen
                 text={e.titolo}
-                voidBack={active}
+                voidBack={true}
                 click={clickEvent}
                 key={i}
-                num={i} //definisce il numero del bottone, che serve per poter chiamare la funzione clickEvent(num) con il proprio bottone
+                id={i} //definisce il numero del bottone, che serve per poter chiamare la funzione clickEvent(id) con il proprio bottone
+                useState={selectedButton}
               />
             );
           })}

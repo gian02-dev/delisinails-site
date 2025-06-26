@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import styles from "./styles.module.scss";
 
 interface ContentContainerProps {
-  key: number;
+  content: string;
+  id: number;
+  visible: boolean;
 }
 
-function ContentContainer({ key }: ContentContainerProps) {
+function ContentContainer({ content, id, visible }: ContentContainerProps) {
   return <></>;
 }
 
