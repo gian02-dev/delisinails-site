@@ -78,7 +78,7 @@ export default function Home() {
               voidBack={false}
               click={() => {}}
               id={0}
-              useState={1}
+              id2={0}
             />
           </a>
         </div>

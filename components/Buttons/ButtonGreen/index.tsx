@@ -1,34 +1,32 @@
 import React from "react";
 import styles from "./styles.module.scss";
+import { useState } from "react";
 
 interface ButtonProps {
   text: string;
   voidBack: boolean;
   click: (num: number) => void; //funzione PROPS
   id: number;
-  useState: number;
+  id2: number;
 }
 
-function ButtonGreen({ text, voidBack, click, id, useState }: ButtonProps) {
+function ButtonGreen({ text, voidBack, click, id, id2 }: ButtonProps) {
+  var style;
   //settaggio del voidBack in caso l'id corrisponde
-  if (useState === id) {
+  if (id2 === id) {
     voidBack = false;
+  } else {
+    voidBack = true;
   }
   return (
     <>
-      {voidBack === true ? (
-        <button
-          onClick={() => click(id)}
-          className={styles.ButtonVoid}
-          key={text}
-        >
-          {text}
-        </button>
-      ) : (
-        <button onClick={() => click(id)} className={styles.Button} key={text}>
-          {text}
-        </button>
-      )}
+      <button
+        onClick={() => click(id)}
+        className={voidBack ? styles.ButtonVoid : styles.Button}
+        key={text}
+      >
+        {text}
+      </button>
     </>
   );
 }
