@@ -78,7 +78,7 @@ export default function Home() {
               voidBack={false}
               click={() => {}}
               id={0}
-              id2={0}
+              idSetOnClick={0}
             />
           </a>
         </div>

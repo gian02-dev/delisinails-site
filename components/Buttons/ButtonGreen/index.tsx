@@ -1,19 +1,18 @@
 import React from "react";
 import styles from "./styles.module.scss";
-import { useState } from "react";
 
 interface ButtonProps {
   text: string;
   voidBack: boolean;
   click: (num: number) => void; //funzione PROPS
   id: number;
-  id2: number;
+  idSetOnClick: number; //id secondario utilizzato normalmente
+  // per ricevere il valore di uno state, fare il confronto con l'id normale e settare il voidback
 }
 
-function ButtonGreen({ text, voidBack, click, id, id2 }: ButtonProps) {
-  var style;
+function ButtonGreen({ text, voidBack, click, id, idSetOnClick }: ButtonProps) {
   //settaggio del voidBack in caso l'id corrisponde
-  if (id2 === id) {
+  if (idSetOnClick === id) {
     voidBack = false;
   } else {
     voidBack = true;

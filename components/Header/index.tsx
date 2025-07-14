@@ -5,10 +5,10 @@ interface BackgroundProps {
   src: string;
 }
 
-function Background({ src }: BackgroundProps) {
+function Header({ src }: BackgroundProps) {
   return (
     <>
-      <div className={styles.Background}>
+      <div className={styles.Header}>
         <a href="/">
           <img src={src} alt="ALESSIA DE LISI" />
         </a>
@@ -17,4 +17,4 @@ function Background({ src }: BackgroundProps) {
   );
 }
 
-export default Background;
+export default Header;

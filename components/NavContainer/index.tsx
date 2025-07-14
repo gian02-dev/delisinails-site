@@ -28,7 +28,7 @@ function NavContainer({ element }: NavContainerProps) {
                 voidBack={true}
                 click={clickEvent}
                 id={i} //definisce il numero del bottone, che serve per poter chiamare la funzione clickEvent(id) con il proprio bottone
-                id2={selectedButton}
+                idSetOnClick={selectedButton}
                 key={e.titolo}
               />
               <ContentContainer
