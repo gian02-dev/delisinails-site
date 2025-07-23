@@ -5,7 +5,7 @@ const TitlesContainerList = [
     content: "content1",
   },
   {
-    titolo: "PERCHÉ IO",
+    titolo: "COSA OFFRO",
     content: "content2",
   },
   {

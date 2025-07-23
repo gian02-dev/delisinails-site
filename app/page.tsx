@@ -8,7 +8,7 @@ import TitlesContainerList from "@/data/NavContainer/TitlesContainerList";
 export default function Home() {
   return (
     <>
-      <NavContainer element={TitlesContainerList} />
+      {/* <NavContainer element={TitlesContainerList} /> */}
       <div className={styles.home}>
         <div className={styles.logo}>
           <a href="/">
@@ -16,9 +16,7 @@ export default function Home() {
           </a>
         </div>
         <div className={styles.text}>
-          <b className={styles.Title}>
-            Piacere, sono Alessia, la tua Nail Artist a Palermo
-          </b>
+          <b className={styles.Title}>La tua Nail Artist a Palermo</b>
           <p>
             Da oltre cinque anni trasformo la cura delle mani in un’esperienza
             di bellezza e benessere, fondendo creatività, tecnica e attenzione
