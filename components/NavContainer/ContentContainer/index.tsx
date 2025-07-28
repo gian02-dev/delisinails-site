@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./styles.module.scss";
+import styles from "./contentcontainer.module.scss";
 
 interface ContentContainerProps {
   content: string;

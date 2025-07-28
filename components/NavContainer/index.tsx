@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./styles.module.scss";
+import styles from "./navcontainer.module.scss";
 import ButtonGreen from "../Buttons/ButtonGreen";
 import { useState } from "react";
 import ContentContainer from "./ContentContainer";

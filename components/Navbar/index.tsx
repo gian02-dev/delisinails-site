@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import styles from "./styles.module.scss";
+import styles from "./navbar.module.scss";
 import ButtonNav from "./ButtonNav";
 import ButtonNavList from "@/data/NavBar/ButtonNavList";
 import { usePathname } from "next/navigation";

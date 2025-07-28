@@ -6,7 +6,9 @@ body {
   height: 100%;
   background-color: $beige-back;
   color: $black-text;
-  font-family: "Faculty Glyphic", sans-serif;
+  // font-family: "Faculty Glyphic", sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   margin: 1rem;
   main {
     display: flex;

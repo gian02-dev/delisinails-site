@@ -1,18 +1,24 @@
 import React from "react";
 import Card from "@/components/Card";
-import styles from "./styles.module.scss";
+import CardsList from "@/data/Cards/CardsList";
+import styles from "./trattamenti.module.scss";
 
 function Trattamenti() {
   return (
     <>
       <div className={styles.Trattamenti}>
-        <Card
-          title="RICOSTRUZIONE"
-          image="/french/1.JPG"
-          text="La ricostruzione unghie è un vero e proprio allungamento dell’unghia naturale, realizzato tramite l’utilizzo delle nail form, per ottenere una forma armoniosa e resistente."
-          button={true}
-          buttonText="CLICCA QUI"
-        />
+        {/* funzione che genera i bottoni navbar con il database dell'oggetto ButtonNavList */}
+        {CardsList.map(function (e, i) {
+          return (
+            <Card
+              title={e.titolo}
+              image={e.immagine}
+              text={e.testo}
+              button={e.buttonYes}
+              buttonText={e.testoButton}
+            />
+          );
+        })}
       </div>
     </>
   );
