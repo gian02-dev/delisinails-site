@@ -12,7 +12,6 @@
   border: 1px solid rgba(0, 0, 0, 0.161);
   margin-bottom: 1rem;
   width: 20rem;
-
   .image {
     img {
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
@@ -38,6 +37,10 @@
       transition: all 0.2s;
       font-size: 1.1rem;
       text-shadow: 3px 2px 2px 0 rgba(255, 255, 255, 0.8);
+
+      .textHide {
+        display: none;
+      }
 
       @media screen and (max-width: 400px) {
         font-size: 0.9rem;

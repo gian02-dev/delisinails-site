@@ -3,4 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  flex-flow: wrap;
+  align-items: baseline;
+  gap: 1rem;
 }
