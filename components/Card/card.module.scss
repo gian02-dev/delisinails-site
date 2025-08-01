@@ -42,6 +42,11 @@
         display: none;
       }
 
+      .readMore {
+        color: $green-button2;
+        cursor: pointer;
+      }
+
       @media screen and (max-width: 400px) {
         font-size: 0.9rem;
       }

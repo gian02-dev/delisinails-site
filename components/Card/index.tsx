@@ -36,11 +36,11 @@ function Card({
   const [selectedRead, setSelectedRead] = useState(0);
 
   if (text.length > 200) {
-    for (let i = 200; i <= text.length; i++) {
-      text3 = text3 + text.charAt(i);
-    }
     for (let i = 0; i < 200; i++) {
       text2 = text2 + text.charAt(i);
+    }
+    for (let i = 200; i <= text.length; i++) {
+      text3 = text3 + text.charAt(i);
     }
   } else {
     text2 = text;
@@ -59,27 +59,23 @@ function Card({
             <div className={styles.text}>
               {text3 != "" ? (
                 <span>
-                  {text2}{" "}
+                  {text2}
                   {id != idSetOnClick && id != selectedRead ? (
-                    <button onClick={() => clickButton(id)}>
-                      ...Read More
+                    <button
+                      className={styles.readMore}
+                      onClick={() => clickButton(id)}
+                    >
+                      ...Leggi ancora
                     </button>
                   ) : (
-                    <span>
-                      {text2}
-                      {text3}
-                    </span>
+                    <span>{text3}</span>
                   )}
                 </span>
               ) : (
-                <span>
-                  {text2}
-                  {text3}
-                </span>
+                <span>{text2}</span>
               )}
             </div>
           </div>
-          {selectedRead}
           <ButtonCard text={buttonText} />
         </div>
       ) : (
