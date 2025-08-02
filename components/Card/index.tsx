@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./card.module.scss";
 import ButtonCard from "@/components/Buttons/ButtonCard";
 import { useState } from "react";
+import { Span } from "next/dist/trace";
 
 interface CardProps {
   title: string;
@@ -9,36 +10,22 @@ interface CardProps {
   text: string;
   button: boolean;
   buttonText: string;
-  id: number;
-  idSetOnClick: number; //id secondario utilizzato normalmente
-  click: (value: number) => void; //funzione PROPS
 }
 
-function Card({
-  title,
-  image,
-  text,
-  button,
-  buttonText,
-  id,
-  idSetOnClick,
-  click,
-}: CardProps) {
+function Card({ title, image, text, button, buttonText }: CardProps) {
   let text2 = "";
   let text3 = "";
   let ids = 0;
 
-  function clickButton(id: number) {
-    setSelectedRead(id);
-    click(id);
+  function clickButton() {
+    if (selectedRead === false) {
+      setSelectedRead(true);
+    } else if (selectedRead === true) {
+      setSelectedRead(false);
+    }
   }
 
-  function clickButton2(id: number) {
-    setSelectedRead(id);
-    click(id);
-  }
-
-  const [selectedRead, setSelectedRead] = useState(0);
+  const [selectedRead, setSelectedRead] = useState(true);
 
   if (text.length > 200) {
     for (let i = 0; i < 200; i++) {
@@ -62,30 +49,27 @@ function Card({
               <span>{title}</span>
             </div>
             <div className={styles.text}>
-              {text3 != "" ? (
-                <span>
-                  {text2}
-                  {id != idSetOnClick && id != selectedRead ? (
-                    <button
-                      className={styles.readMore}
-                      onClick={() => clickButton(id)}
-                    >
-                      ...Leggi ancora
-                    </button>
+              <span>{text2}</span>
+              <span
+                className={
+                  selectedRead === false ? styles.text : styles.textHide
+                }
+              >
+                {text3}
+              </span>
+              {text.length > 200 ? (
+                <button
+                  className={styles.readMore}
+                  onClick={() => clickButton()}
+                >
+                  {selectedRead === false ? (
+                    <>...Leggi meno</>
                   ) : (
-                    <span>
-                      {text3}{" "}
-                      <button
-                        className={styles.readMore}
-                        onClick={() => clickButton2(0)}
-                      >
-                        ...Leggi meno
-                      </button>
-                    </span>
+                    <>...Leggi ancora</>
                   )}
-                </span>
+                </button>
               ) : (
-                <span>{text2}</span>
+                <></>
               )}
             </div>
           </div>

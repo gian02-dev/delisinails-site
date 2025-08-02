@@ -7,12 +7,6 @@ import styles from "./trattamenti.module.scss";
 import { useState } from "react";
 
 function Trattamenti() {
-  const [selectedRead, setSelectedRead] = useState(0);
-
-  function clickEvent(id: number) {
-    setSelectedRead(id);
-  }
-
   return (
     <>
       <div className={styles.Trattamenti}>
@@ -25,9 +19,6 @@ function Trattamenti() {
               text={e.testo}
               button={e.buttonYes}
               buttonText={e.testoButton}
-              id={i}
-              idSetOnClick={selectedRead}
-              click={clickEvent}
               key={i}
             />
           );

@@ -20,7 +20,7 @@ const CardsList = [
     titolo: "SEMIPERMANENTE",
     immagine: "/french/2.jpeg",
     testo:
-      "Il semipermanente è la soluzione ideale per chi desidera unghie curate e brillanti, senza ricostruzione. Viene applicato come uno smalto, ma ha la durata di circa 2-3 settimane",
+      "Il semipermanente è la soluzione ideale per chi desidera unghie curate e brillanti, senza ricostruzione. Viene applicato come uno smalto, ma ha la durata di circa 2 settimane",
     testoButton: "PRENOTA",
     buttonYes: true,
   },
