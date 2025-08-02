@@ -33,6 +33,11 @@ function Card({
     click(id);
   }
 
+  function clickButton2(id: number) {
+    setSelectedRead(id);
+    click(id);
+  }
+
   const [selectedRead, setSelectedRead] = useState(0);
 
   if (text.length > 200) {
@@ -68,7 +73,15 @@ function Card({
                       ...Leggi ancora
                     </button>
                   ) : (
-                    <span>{text3}</span>
+                    <span>
+                      {text3}{" "}
+                      <button
+                        className={styles.readMore}
+                        onClick={() => clickButton2(0)}
+                      >
+                        ...Leggi meno
+                      </button>
+                    </span>
                   )}
                 </span>
               ) : (
