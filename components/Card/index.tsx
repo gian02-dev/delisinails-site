@@ -40,65 +40,44 @@ function Card({ title, image, text, button, buttonText }: CardProps) {
   }
   return (
     <>
-      {button === true ? (
-        <div className={styles.Card}>
-          <div className={styles.image}>
-            {image.length > 1 ? (
-              <Fade duration={2000}>
-                {image.map((each, index) => (
-                  <img key={index} style={{ width: "100%" }} src={each} />
-                ))}
-              </Fade>
+      <div className={styles.Card}>
+        <div className={styles.image}>
+          {image.length > 1 ? (
+            <Fade duration={2000}>
+              {image.map((each, index) => (
+                <img key={index} style={{ width: "100%" }} src={each} />
+              ))}
+            </Fade>
+          ) : (
+            <img src={image[0]} alt={"IMAGE"} />
+          )}
+        </div>
+        <div className={styles.textContent}>
+          <div className={styles.title}>
+            <span>{title}</span>
+          </div>
+          <div className={styles.text}>
+            <span>{text2}</span>
+            <span
+              className={selectedRead === false ? styles.text : styles.textHide}
+            >
+              {text3}
+            </span>
+            {text.length > lunghezza ? (
+              <button className={styles.readMore} onClick={() => clickButton()}>
+                {selectedRead === false ? (
+                  <>...Leggi meno</>
+                ) : (
+                  <>...Leggi ancora</>
+                )}
+              </button>
             ) : (
-              <img src={image[0]} alt={"IMAGE"} />
+              <></>
             )}
           </div>
-          <div className={styles.textContent}>
-            <div className={styles.title}>
-              <span>{title}</span>
-            </div>
-            <div className={styles.text}>
-              <span>{text2}</span>
-              <span
-                className={
-                  selectedRead === false ? styles.text : styles.textHide
-                }
-              >
-                {text3}
-              </span>
-              {text.length > lunghezza ? (
-                <button
-                  className={styles.readMore}
-                  onClick={() => clickButton()}
-                >
-                  {selectedRead === false ? (
-                    <>...Leggi meno</>
-                  ) : (
-                    <>...Leggi ancora</>
-                  )}
-                </button>
-              ) : (
-                <></>
-              )}
-            </div>
-          </div>
-          <ButtonCard text={buttonText} />
         </div>
-      ) : (
-        <div className={styles.Card}>
-          <div className={styles.image}>
-            <img src={image[0]} alt={title} />
-          </div>
-          <div className={styles.textContent}>
-            <div className={styles.title}>
-              <span>{title}</span>
-            </div>
-            <div className={styles.text}>
-              <span>{text}</span>
-            </div>
-          </div>
-        </div>
-      )}
+        {button === true ? <ButtonCard text={buttonText} /> : <></>}
+      </div>
     </>
   );
 }
