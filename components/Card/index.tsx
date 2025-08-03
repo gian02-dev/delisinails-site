@@ -2,11 +2,12 @@ import React from "react";
 import styles from "./card.module.scss";
 import ButtonCard from "@/components/Buttons/ButtonCard";
 import { useState } from "react";
-import { Span } from "next/dist/trace";
+import { Fade } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
 
 interface CardProps {
   title: string;
-  image: string;
+  image: string[];
   text: string;
   button: boolean;
   buttonText: string;
@@ -15,7 +16,7 @@ interface CardProps {
 function Card({ title, image, text, button, buttonText }: CardProps) {
   let text2 = "";
   let text3 = "";
-  let ids = 0;
+  let lunghezza = 220;
 
   function clickButton() {
     if (selectedRead === false) {
@@ -27,11 +28,11 @@ function Card({ title, image, text, button, buttonText }: CardProps) {
 
   const [selectedRead, setSelectedRead] = useState(true);
 
-  if (text.length > 200) {
-    for (let i = 0; i < 200; i++) {
+  if (text.length > lunghezza) {
+    for (let i = 0; i < lunghezza; i++) {
       text2 = text2 + text.charAt(i);
     }
-    for (let i = 200; i <= text.length; i++) {
+    for (let i = lunghezza; i <= text.length; i++) {
       text3 = text3 + text.charAt(i);
     }
   } else {
@@ -42,7 +43,15 @@ function Card({ title, image, text, button, buttonText }: CardProps) {
       {button === true ? (
         <div className={styles.Card}>
           <div className={styles.image}>
-            <img src={image} alt={title} />
+            {image.length > 1 ? (
+              <Fade duration={2000}>
+                {image.map((each, index) => (
+                  <img key={index} style={{ width: "100%" }} src={each} />
+                ))}
+              </Fade>
+            ) : (
+              <img src={image[0]} alt={"IMAGE"} />
+            )}
           </div>
           <div className={styles.textContent}>
             <div className={styles.title}>
@@ -57,7 +66,7 @@ function Card({ title, image, text, button, buttonText }: CardProps) {
               >
                 {text3}
               </span>
-              {text.length > 200 ? (
+              {text.length > lunghezza ? (
                 <button
                   className={styles.readMore}
                   onClick={() => clickButton()}
@@ -78,7 +87,7 @@ function Card({ title, image, text, button, buttonText }: CardProps) {
       ) : (
         <div className={styles.Card}>
           <div className={styles.image}>
-            <img src={image} alt={title} />
+            <img src={image[0]} alt={title} />
           </div>
           <div className={styles.textContent}>
             <div className={styles.title}>

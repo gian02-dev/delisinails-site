@@ -4,6 +4,9 @@ import styles from "./page.module.scss";
 import ButtonGreen from "@/components/Buttons/ButtonGreen";
 import NavContainer from "@/components/NavContainer";
 import TitlesContainerList from "@/data/NavContainer/TitlesContainerList";
+import { Slide } from "react-slideshow-image";
+import "react-slideshow-image/dist/styles.css";
+import CardsList from "@/data/Cards/CardsList";
 
 export default function Home() {
   return (

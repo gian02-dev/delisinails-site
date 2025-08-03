@@ -4,7 +4,6 @@ import React from "react";
 import Card from "@/components/Card";
 import CardsList from "@/data/Cards/CardsList";
 import styles from "./trattamenti.module.scss";
-import { useState } from "react";
 
 function Trattamenti() {
   return (
